@@ -85,7 +85,11 @@ img{display: block;max-width: 100%;}
  background-color: var(--dark-color);
   background: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero-bg.jpg) no-repeat center;
   padding: 188px 0; 
-  background-size: 1600px, cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 
@@ -122,9 +126,12 @@ img{display: block;max-width: 100%;}
 
 /* features */
 .bgicon{
+  display:flex;
+  justify-content: center;
+  align-items: center;
   background: var(--light-color);
+  height: 112px;
   border-radius: 4px;
-  padding: 24px 100px;
   margin-bottom: 8px;
 }
 
@@ -141,6 +148,7 @@ img{display: block;max-width: 100%;}
 }
 .our-team-item-text {
   text-align: center;
+  margin-bottom: 8px;
 }
 
 
@@ -185,16 +193,15 @@ img{display: block;max-width: 100%;}
   border: 1px solid var(--pressed-state-color);;
 }
 
-.portfolio-item{
+.portfolio-link{
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  display: block;
 }
-.portfolio-item:hover {
+.portfolio-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.portfolio-item:hover  {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-.portfolio-item:hover .portfolio-item-underblock{
+
+.portfolio-link:hover .portfolio-item-underblock{
   border-bottom: 0.5px solid var(--light-color);
   border-left: 0.5px solid var(--light-color);
   border-right: 0.5px solid var(--light-color);
@@ -319,9 +326,8 @@ height: 88px;
 .customer-link{
   border: 1px solid var(--subtle-text-color);
   border-radius: 4px;
-  /* width: 168px;
-  height: 88px; */
-  padding: 16px 32px;
+  height: 100%;
+  width: 100%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -338,7 +344,8 @@ height: 88px;
 }
 
 .our-team-list-icon{
-padding: 8px 16px 0px 16px;
+ justify-content: center;
+ gap: 24px;
 }
 .our-team-link-icon{
   background-color: var(--primary-brand-color);
@@ -357,7 +364,8 @@ padding: 8px 16px 0px 16px;
   display: flex;
 }
 .footer-list-icon{
-  justify-content: flex-start;
+  justify-content: center;
+  gap: 16px;
 }
 .footer-sosial-media{
   margin-top: 0;
