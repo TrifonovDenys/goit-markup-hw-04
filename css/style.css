@@ -21,6 +21,19 @@ body{
 .link{text-decoration: none;}
 .list{list-style: none;} 
 img{display: block;max-width: 100%;}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .section {
   padding: 120px 0;
 }
@@ -203,7 +216,7 @@ img{display: block;max-width: 100%;}
   
 }
 
-.portfolio-link:hover .portfolio-item-underblock{
+.portfolio-link:hover, .portfolio-link:focus  .portfolio-item-underblock{
   border-bottom: 0.5px solid var(--light-color);
   border-left: 0.5px solid var(--light-color);
   border-right: 0.5px solid var(--light-color);
@@ -248,7 +261,7 @@ nav, .list, .flex{
   position: relative;
   display: flex;
 }
-.nav-list-item:hover::after {
+.nav-list-item:active::after {
   content: '';
   width: 100%;
   height: 4px;
@@ -342,7 +355,7 @@ height: 88px;
 .customer-icon{
   fill: var(--subtle-text-color);
 }
-.customer-link:hover > .customer-icon{
+.customer-link:hover,.customer-link:focus > .customer-icon{
   fill: var(--pressed-state-color);
 }
 
