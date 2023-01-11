@@ -16,7 +16,6 @@ body{
   font-size: 16px;
   color: var(--text-color);
   background-color: var(--site-background);
-  outline: none;
 } 
 .link{text-decoration: none;}
 .list{list-style: none;} 
@@ -216,11 +215,18 @@ img{display: block;max-width: 100%;}
   
 }
 
-.portfolio-link:hover, .portfolio-link:focus  .portfolio-item-underblock{
+.portfolio-link:hover .portfolio-item-underblock{
   border-bottom: 0.5px solid var(--light-color);
   border-left: 0.5px solid var(--light-color);
   border-right: 0.5px solid var(--light-color);
 }
+
+.portfolio-link:focus .portfolio-item-underblock{
+    border-bottom: 0.5px solid var(--light-color);
+    border-left: 0.5px solid var(--light-color);
+    border-right: 0.5px solid var(--light-color);
+  }
+
 .portfolio-item-title{
     text-transform: capitalize;
 }
